@@ -1,8 +1,9 @@
 package com.agree.bank.zjjg.pojo;
 
 import javax.validation.constraints.NotBlank;
+import java.io.Serializable;
 
-public class Users {
+public class Users implements Serializable {
     private Integer id;
     @NotBlank(message = "用户名不能为空！")
     private String name;

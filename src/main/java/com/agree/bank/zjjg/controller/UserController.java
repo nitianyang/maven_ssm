@@ -58,7 +58,9 @@ public class UserController {
             map.put(list.get(i).getField(),list.get(i).getDefaultMessage());
         }
         request.setAttribute("err",map);
+        System.out.println(1234);
 //        校验失败返回请求界面并提示错误.....
         return "login";
     }
+
 }

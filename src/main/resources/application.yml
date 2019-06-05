@@ -17,6 +17,9 @@ spring:
       charset: utf-8
       enabled: true
       force: true
+  cache:
+    ehcache:
+      config: classpath:ehcache.xml
 
 server:
   tomcat:
@@ -26,7 +29,6 @@ server:
 mybatis:
   config-location: classpath:cfg/mybatis-cfg.xml
   mapper-locations: classpath:mapper/user-mapper.xml
-
 
 
 
