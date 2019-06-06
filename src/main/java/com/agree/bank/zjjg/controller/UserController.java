@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
@@ -21,10 +22,10 @@ public class UserController {
     private UserService userService;
 
     @RequestMapping("/hello")
+    @ResponseBody
     public String helloword(Integer id){
-        System.out.println(id+"===============================");
-        System.out.println(userService.selectById(id));
-        return "test";
+
+        return "你好,小老弟";
     }
 
     /**
